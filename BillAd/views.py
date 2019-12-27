@@ -7,8 +7,10 @@ def homepage(request):
     return render(request, 'homepage.html')
 
 def about(request):
-    return HttpResponse('about')
-
+    return render(request, 'about.html')
+"""
+this bottom function is just used for  testing 
+"""
 def loginsub(request):
     return render(request, 'loginsub.html')
 
