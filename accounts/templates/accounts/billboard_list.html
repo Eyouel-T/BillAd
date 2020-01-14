@@ -6,26 +6,11 @@
         <meta charset="utf-8">
         <title>billboard list</title>
         <link rel="stylesheet" href="{%static 'style.css'%}">
-        <style> body{
-                    background-image: url("{%static 'images.jfif'%}");
-                    background-repeat: no-repeat;
-                    background-size: cover;
-        }
-
-        </style>
     <head>
     <body>
         <h1>This is the billboard list page</h1>
         <div class="billboards">
-            {% for billboard in billboards %}
-                <div class="billboard">
-                    <h2><a href= "">{{billboard.name}}</a></h2>
-                    <img srs="{{billboard.photo1}">
-                    <p>owner: {{billboard.owner}}</p>
-                    <p>price: {{billboard.price}}</p>
-                    <p>rating:{{billboard.rating}}</p>
-
-                </div>
+            {
             {% endfor %}
         </div>
 

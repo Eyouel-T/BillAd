@@ -1,56 +1,29 @@
+{%extends 'base.html'%}
 {%load static from staticfiles%}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Homepage</title>
-        <link rel="stylesheet" href="{%static 'style.css'%}">
-        <style> body{
-                    background-image: url("{%static 'images.jfif'%}");
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    }
-                ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #151;
-}
-.active {
-  background-color: #4CAF0;
-}
-
-        </style>
-
-    </head>
-    <body>
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="loginsub/">Login</a></li>
-            <li><a href="list/">Billboard List</a></li>
-            <li><a href="about/">About</a></li>
-</ul>
-    <h1 style="align:center">BillAd </h1>
-    <h1 style="align:center">Advertisement Billboard Rental system</h1>
-
+{%block title%}
+Homepage
+{%endblock%}
+{%block content%}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class ="nav-link" href="">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="loginsub/">   Login  </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="list/">Billboard List</a>
+    </li >
+    <li class="nav-item">
+      <a class="nav-link" href="about/">   About  </a>
+    </li>
+  </ul>
+</nav>
+    <h1>BillAd </h1>
+    <h1>Advertisement Billboard Rental system</h1>
     <p>welcome to BillAd</p>
-    </body>
-</html>
+
+{%endblock%}
+
+
