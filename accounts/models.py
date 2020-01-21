@@ -6,3 +6,10 @@ class Account(models.Model):
     email = models.EmailField(default='noemail@empty.com')
     password = models.CharField(max_length=100)
 
+class Advertiser(models.Model):
+    name = models.CharField(max_length=100)
+class Owner(models.Model):
+    name = models.CharField(max_length=100)
+
+
+
