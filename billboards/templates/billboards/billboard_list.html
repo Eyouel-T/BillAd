@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%load static from staticfiles%}
+{%block title%}
+billboard list
+{%endblock%}
+{%block content%}
+<p>test the billboard list page</p>
+`   <div class="billboards">
+        {%for billboard in billboards%}
+        <div class="billboard">
+            <h1><a href="#">{{billboard.name}}</a></h1>
+            <p>{{billboard.rating}}</p>
+            <p>{{billboard.owner}}</p>
+        </div>
+        {%endfor%}
+    </div>
+{%endblock%}
