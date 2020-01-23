@@ -18,11 +18,14 @@ from django.urls import include, path
 from . import views
 
 #from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     path('', views.homepage),
+    path('accounts/', include("accounts.urls")),
+    path('billboards/', include("billboards.urls")),
     path('admin/', admin.site.urls),
     path('about/', views.about),
-    path('accounts/', include("accounts.urls")),
     path('login/', views.loginsub),
     path('bilboards', views.list),
 
@@ -30,3 +33,4 @@ urlpatterns = [
 ]
 
 #urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

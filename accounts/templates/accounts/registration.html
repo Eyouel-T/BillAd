@@ -1,6 +1,12 @@
-{%extends 'base.html'%}
-{%block title%}registration{%endblock%}
-{%block content%}
-<hl>registration page to be put here</hl>
+{% extends 'base.html' %}
+{% block title%}   registration      {% endblock %}
+{% block content %}
+    <hl>registration page to be put here</hl>
+    <br><br><br>
+    <form class="site-form" action="/accounts/registration/" method="post">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="register">
+    </form>
 
-{%endblock%}
+{% endblock %}
