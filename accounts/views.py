@@ -1,8 +1,8 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 # from .models import Billboard, Account
 from . import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 
 def registration(request):
@@ -18,7 +18,14 @@ def registration(request):
 
 
 def login(request):
-    return render(request, 'Registration/login.html')
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            # log the user in,
+            return redirect('billboards:list')
+    else:
+        form =AuthenticationForm()
+    return render(request,'accounts/login.html',{'form':form})
 
 
 def accounts(request):
