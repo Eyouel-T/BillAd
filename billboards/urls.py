@@ -6,5 +6,6 @@ from . import views
 app_name = 'billboards'
 
 urlpatterns = [
-    path('', views.billboards, name="list"),
+    ('', views.billboards, name="list"),
 ]
+#this is a git test
