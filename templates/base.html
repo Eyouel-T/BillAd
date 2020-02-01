@@ -1,16 +1,71 @@
 {%load static from staticfiles%}
 <!DOCTYPE html>
 <html lang="en">
+	
 	<head>
-		<title>{%block title%}{%endblock%}</title>
-		<link rel="stylesheet" type="text/css" href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}">
-		<script type="text/javascript" src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" href="{%static 'img/favicon.png'%}" type="image/png">
+		<title>{% block title %} {%endblock%}</title>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="{%static 'css/bootstrap.css'%}">
+		<link rel="stylesheet" href="{%static 'css/themify-icons.css' %}">
+		<link rel="stylesheet" href="{%static 'vendors/fontawesome/css/all.min.css' %}">
+		<link rel="stylesheet" href="{%static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+		<link rel="stylesheet" href="{%static 'vendors/animate-css/animate.css' %}">
+		<!-- main css -->
+		<link rel="stylesheet" href="{%static 'css/style.css' %}">
+		<link rel="stylesheet" href="{%static 'css/responsive.css' %}">
 	</head>
 	<body>
-		<div class="wrapper">
+		<header class="header_area">	
+			<div class="main_menu">
+				<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="feature.html">Features</a></li> 
+								<li class="nav-item"><a class="nav-link" href="price.html">Price</a></li>     
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="feature.html">Features</a></li> 
+										<li class="nav-item"><a class="nav-link" href="price.html">Price</a></li>
+										<li class="nav-item"><a class="nav-link" href="element.html">Element</a></li>
+									</ul>
+								</li>
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+									</ul>
+								</li> 
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							</ul>
+						</div>
+						<div class="right-button">
+							<ul>
+								<li class="shop-icon"><a href="#"><i class="ti-shopping-cart-full"></i><span>0</span></a></li>
+								<li><a class="sign_up" href="">Sign Up</a></li>
+							</ul>
+						</div> 
+					</div>
+				</nav>
+			</div>
+		</header>
 			{% block content%}
 			{% endblock %}
-		</div>
+		
 	</body>
 </html>
