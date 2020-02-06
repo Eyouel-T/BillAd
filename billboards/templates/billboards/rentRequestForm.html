@@ -2,9 +2,14 @@
 {%load static from staticfiles%}
 {%block title%}rentRequest{%endblock%}
 {%block content%}
+<div class="renttitle">
+<header>Rent Form</header>
+</div>
+<div class="rentform">
 <form action="{%url 'billboards:rentRequestForm'%}", method="POST" >
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit", name="save">rent</button>
 </form>
+</div>
 {%endblock%}
