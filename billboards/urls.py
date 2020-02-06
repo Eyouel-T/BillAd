@@ -9,5 +9,5 @@ urlpatterns = [
     #path('', views.billboards, name="list"),
     path('', views.BillboardList, name="BillboardList"),
     path('rent/', views.sendRentRequest, name="rentRequestForm"),
-    path('detail/', views.detail, name="detail"),
+    path('<int:billboard_id>/', views.detail, name="detail"),
 ]

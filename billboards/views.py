@@ -7,10 +7,13 @@ def billboards(request):
     return render(request, 'billboards/billboard_list.html',{'billboards':billboards})
 def BillboardList(request):
     billboards = Billboard.objects.all().order_by('rating')
-    return render(request, 'billboards/Billboard_list.html',{'billboards':billboards})
+    return render(request, 'billboards/billboard_list.html',{'billboards':billboards})
 def addBillboard(request):
     return True
-def detail(request,):
+def detail(request, Billboard_id):
+    singleBillboard=Billboard.objects.get(id=Billboard_id) 
+    return render(request,'billboards/billboardDetail.html',{'singleBillboard':singleBillboard} )
+    
 def sendRentRequest(request):
     if request.method=="POST":
         form = rentRequestForm(request.POST)
