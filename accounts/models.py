@@ -1,7 +1,7 @@
 from django.db import models
 
 class Account(models.Model):
-    profile_picture = models.ImageField(default='')
+    #profile_picture = models.ImageField(default='default.png', blank=True)
     name = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField(default='noemail@empty.com')

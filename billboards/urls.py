@@ -6,6 +6,8 @@ from . import views
 app_name = 'billboards'
 
 urlpatterns = [
-    ('', views.billboards, name="list"),
+    #path('', views.billboards, name="list"),
+    path('', views.BillboardList, name="BillboardList"),
+    path('rent/', views.sendRentRequest, name="rentRequestForm"),
+    path('detail/', views.detail, name="detail"),
 ]
-#this is a git test

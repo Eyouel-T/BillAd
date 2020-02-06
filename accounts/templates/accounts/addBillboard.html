@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%load static from staticfiles%}
+{%block title%}addbillboard{%endblock%}
+{%block content%}
+<form action="{%url 'accounts:addBillboard'%}", method="POST" >
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit", name="save">Create new</button>
+</form>
+{%endblock%}

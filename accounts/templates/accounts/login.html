@@ -3,10 +3,11 @@
 {% block content %}
     <hl>Login page to be edited</hl>
     <br><br><br>
-    <form class="site-form" action= "{%url 'accounts:login'%}" method="post">
+    <form class="site-form" action= "{%url 'accounts:signup'%}" method="post">
         {% csrf_token %}
         {{form}}
         <input type="submit" value="login">
+        
     </form>
 
 {% endblock %}

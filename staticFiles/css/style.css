@@ -1,0 +1,63 @@
+{%load static from staticfiles%}
+#JumboHeaderImg{
+    background-size: cover;
+    background-color: #5CDB95;
+}
+body {
+    background-color: #8ee4af;
+}
+.navBackground{
+    background-color: #05386B;
+}
+.jumbotron{
+    min-height: 350px;
+}
+#jumboHeader{
+    color: #EDF5E1;
+}
+#jumboSlogan{
+    color: #EDF5E1;
+}
+.nav-link {
+    color: white;
+}
+.jumbotronObjects{
+  align-self: center;
+}
+/*this code is for the album view of the billboards*/
+
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/*the code for the album ends here*/

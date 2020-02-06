@@ -26,8 +26,10 @@ urlpatterns = [
     path('billboards/', include("billboards.urls")),
     path('admin/', admin.site.urls),
     path('about/', views.about),
-    path('login/', views.loginsub),
-    path('bilboards', views.list),
+    path('about/BillboardList/', views.BillboardList),
+    path('login/', views.login),
+    #path('list/', views.BillboardList, name="list"),
+    path('BillboardList/', views.BillboardList, name="list"),
 
 
 ]

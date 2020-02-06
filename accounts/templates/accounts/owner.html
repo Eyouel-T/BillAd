@@ -1,7 +1,13 @@
 {%extends 'base.html'%}
 {%block content%}
 
-<h1>
-    owner page to be put here
-</h1>
+<p><requests:/p>
+
+    {%for rent in rents%}
+ 
+    <p>{{rent.startDate}}</p>
+    <p>{{rent.endDate}}</p>
+    <p>{{rent.advertisementType}}</p>
+    
+    
 {%endblock%}

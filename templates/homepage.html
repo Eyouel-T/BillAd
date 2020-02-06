@@ -4,26 +4,29 @@
 Homepage
 {%endblock%}
 {%block content%}
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm navBackground">
   <ul class="navbar-nav">
     <li class="nav-item active">
       <a class ="nav-link" href="">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="loginsub/">   Login  </a>
+      <a class="nav-link" href="login/">   Login  </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="list/">Billboard List</a>
+      <a class="nav-link" href="BillboardList/">Billboard List</a>
     </li >
     <li class="nav-item">
       <a class="nav-link" href="about/">   About  </a>
     </li>
   </ul>
 </nav>
-    <h1>BillAd </h1>
-    <h1>Advertisement Billboard Rental system</h1>
-    <p>welcome to BillAd</p>
-
+<div class="jumbotron jumbotron-fluid" id="JumboHeaderImg">
+  <div class="container jumbotronObjects">
+    <!-- <h1 class="display-4" id="jumboHeader">BillAd</h1> -->
+        <a class ="nav-link" href=""><img class="mb-4" src="{%static 'images/logo.png' %}"" alt="" width="200" height="200"></a>
+    <p class="lead" id="jumboSlogan">Advertisement Renting made easy</p>
+  </div>
+</div>
 {%endblock%}
 
 
