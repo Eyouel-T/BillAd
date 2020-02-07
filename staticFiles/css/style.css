@@ -1,4 +1,9 @@
 {%load static from staticfiles%}
+
+#about-text{
+  padding: 50px;
+}
+
 #JumboHeaderImg{
     background-size: cover;
     background-color:#379683;
