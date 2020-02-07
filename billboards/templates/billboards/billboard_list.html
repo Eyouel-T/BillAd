@@ -32,7 +32,7 @@ Billboard list
                   <p class="card-text">price: {{billboard.price}} birr</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="">View details</a></button>
+                      <p><a class="btn btn-secondary" href="{% url 'billboards:detail' billboard.id %}" role="button">View details &raquo;</a></p>
                       <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{% url 'billboards:rentRequestForm'%}">rent</a></button>
                     </div>
                     <small class="text-muted">9 mins</small>
