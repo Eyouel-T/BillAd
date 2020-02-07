@@ -21,6 +21,13 @@ from .models import Account
     return render(request,{'AddBillboard':addBillboard})"""
 #completely confusing code above
 #just ignore it for now
+def basicTable(request):
+    users = Account.objects.all().order_by('name')
+    billboards = Billboard.objects.all().order_by('price')
+    rents= rent.objects.all()
+    return render(request,"accounts/basicTable.html", {'users':users,'billboards':billboards,'rents':rents})
+def admin(request):
+    return render(request,"accounts/admin.html")
 def owner(request):
     rents= rent.objects.all()  
     return render(request,"accounts/owner.html",{'rents':rents})

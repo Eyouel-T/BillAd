@@ -1,13 +1,13 @@
 {%load static from staticfiles%}
 #JumboHeaderImg{
     background-size: cover;
-    background-color: rgba(46, 46, 97, 0.801);
+    background-color:#379683;
 }
 body {
-  background-color: rgba(21, 21, 70, 0.87);
+  background-color: #379683;
 }
 .navBackground{
-    background-color: rgba(88, 88, 187, 0.87);
+    background-color: #05386b;
 }
 .jumbotron{
     min-height: 350px;
@@ -60,7 +60,7 @@ footer {
   padding-bottom: 3rem;
 }
 nav.navbar.navbar-expand-sm.navBackground{
-  background-color: rgba(21, 21, 70, 0.87);
+  background-color: #05386b;
 }
 .jumbotron.jumbotron-fluid{
   background-image: linear-gradient(rgba(42, 42, 44, 0.774), rgba(60, 61, 65, 0.726));

@@ -15,6 +15,8 @@ urlpatterns = [
     path('signin/', views.signin_view, name="signin"),
     path('owner/', views.owner, name="owner"),
     path('registrationtest/', views.registrationtest, name="registrationtest"),
+    path('admin/', views.admin, name="admin"),
+     path('basicTable/', views.basicTable, name="basicTable"),
 
 ]
 
