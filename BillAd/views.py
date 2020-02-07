@@ -8,9 +8,7 @@ def homepage(request):
 
 def about(request):
     return render(request, 'about.html')
-"""
-this bottom function is just used for  testing 
-"""
+
 def login(request):
     return redirect('accounts:login')
 

@@ -10,8 +10,8 @@ def BillboardList(request):
     return render(request, 'billboards/billboard_list.html',{'billboards':billboards})
 def addBillboard(request):
     return True
-def detail(request, Billboard_id):
-    singleBillboard=Billboard.objects.get(id=Billboard_id) 
+def detail(request, billboard_id):
+    singleBillboard=Billboard.objects.get(id=billboard_id) 
     return render(request,'billboards/billboardDetail.html',{'singleBillboard':singleBillboard} )
     
 def sendRentRequest(request):
